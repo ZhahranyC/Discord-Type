@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="38.316643mm"
+   height="48.866058mm"
+   viewBox="0 0 38.316643 48.866058"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2">
+    <radialGradient
+       id="paint0_radial_8_27"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-28.743797,-0.12491759,0.20496492,-47.162856,108.02442,191.06093)">
+      <stop
+         offset="0.3144"
+         stop-color="#6E82FE"
+         id="stop186" />
+      <stop
+         offset="0.6616"
+         stop-color="#606CF1"
+         id="stop188" />
+      <stop
+         offset="0.9715"
+         stop-color="#4353A9"
+         id="stop190" />
+    </radialGradient>
+    <radialGradient
+       id="paint1_radial_8_27"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.30375818,30.073389,-22.632574,-0.22860175,109.63854,162.45762)">
+      <stop
+         offset="0.2141"
+         stop-color="#F5F5F5"
+         id="stop193" />
+      <stop
+         offset="0.3275"
+         stop-color="#F5F5F5"
+         id="stop195" />
+      <stop
+         offset="0.4868"
+         stop-color="#F5F5F5"
+         id="stop197" />
+      <stop
+         offset="0.6722"
+         stop-color="#F5F5F5"
+         id="stop199" />
+      <stop
+         offset="0.7931"
+         stop-color="#F5F5F5"
+         id="stop201" />
+      <stop
+         offset="0.8221"
+         stop-color="#F5F5F5"
+         id="stop203" />
+      <stop
+         offset="0.8627"
+         stop-color="#F5F5F5"
+         id="stop205" />
+      <stop
+         offset="0.9101"
+         stop-color="#F5F5F5"
+         id="stop207" />
+      <stop
+         offset="0.9409"
+         stop-color="#F5F5F5"
+         id="stop209" />
+    </radialGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-89.587176,-142.07237)">
+    <g
+       id="g367"
+       inkscape:export-filename="Purple-Fire.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         d="m 97.169814,157.02996 c -0.232119,2.47584 -0.394997,6.85744 1.066879,8.72246 0,0 -0.688181,-4.81324 5.481057,-10.85217 2.48399,-2.43105 3.05816,-5.7376 2.19078,-8.21749 -0.49271,-1.40488 -1.39264,-2.56542 -2.17448,-3.37579 -0.45609,-0.47643 -0.10589,-1.26234 0.55787,-1.23384 4.01508,0.17917 10.5224,1.29493 13.2873,8.23379 1.21338,3.04594 1.30307,6.19369 0.72469,9.39435 -0.36645,2.0442 -1.66952,6.58865 1.30307,7.14653 2.1217,0.39904 3.14775,-1.28678 3.60786,-2.50026 0.19156,-0.50493 0.8554,-0.63119 1.21365,-0.22805 3.58351,4.07615 3.88884,8.87728 3.14774,13.01033 -1.43351,7.98963 -9.52473,13.80437 -17.56304,13.80437 -10.041783,0 -18.035321,-5.74569 -20.108014,-16.14566 -0.834787,-4.19841 -0.411295,-12.50556 6.06335,-18.36939 0.48051,-0.43976 1.266428,-0.0488 1.201288,0.61082 z"
+         fill="url(#paint0_radial_8_27)"
+         id="path182"
+         style="fill:url(#paint0_radial_8_27);stroke-width:0.264583" />
+      <path
+         d="m 113.68217,171.97045 c -3.70152,-4.76435 -2.04417,-10.20056 -1.13612,-12.36692 0.12224,-0.28506 -0.20347,-0.5538 -0.46011,-0.3787 -1.59226,1.08318 -4.85397,3.63231 -6.37286,7.21982 -2.05642,4.84979 -1.90982,7.22389 -0.69226,10.1232 0.73298,1.74704 -0.11811,2.11746 -0.54567,2.18281 -0.41535,0.0651 -0.79812,-0.21193 -1.10353,-0.50085 -0.87551,-0.83503 -1.5067,-1.9222 -1.80803,-3.09484 -0.0651,-0.25267 -0.395,-0.32173 -0.54565,-0.11403 -1.140195,1.57586 -1.730639,4.10474 -1.759162,5.89227 -0.08959,5.52582 4.475242,10.00522 9.996912,10.00522 6.95934,0 12.02902,-7.69647 8.03037,-14.13034 -1.16073,-1.87298 -2.25187,-3.0988 -3.60389,-4.83764 z"
+         fill="url(#paint1_radial_8_27)"
+         id="path184"
+         style="fill:url(#paint1_radial_8_27);stroke-width:0.264583" />
+    </g>
+  </g>
+</svg>
