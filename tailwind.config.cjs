@@ -11,29 +11,13 @@ module.exports = {
         "sub-black-dark": "#1B1B1B",
         "sub-black-light": "#282828",
         "main-gray": "#656565",
-        "sub-gray-dark": "#373737",
+        "sub-gray-dark": "373737",
       },
       fontFamily: {
         "lexend-deca": ["Lexend Deca", "sans-serif"],
       },
       gridTemplateRows: {
         "dis-monkey": "47px 1fr",
-      },
-      keyframes: {
-        caret: {
-          "0%, to": {
-            opacity: "0",
-          },
-          "50%": {
-            opacity: "1",
-          },
-        },
-      },
-      animation: {
-        caret: "caret 0.85s infinite",
-      },
-      width: {
-        "blur-cover": "100% + 10px",
       },
     },
   },
