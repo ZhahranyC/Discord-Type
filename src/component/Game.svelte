@@ -358,8 +358,6 @@
   const changeIsUnwantedEl = (state) => {
     isUnwantedEl = state;
   };
-
-  $: console.log(gameState);
 </script>
 
 <svelte:window on:keyup={handleWindowKeyup} />

@@ -4,7 +4,11 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" type="image/svg+xml" href="/C-Letter-Purple.svg" />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="/Discord-Type/C-Letter-Purple.svg"
+  />
   <title>DiscordType</title>
 </svelte:head>
 
