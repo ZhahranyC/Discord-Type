@@ -2,6 +2,7 @@
   // @ts-nocheck
   import { onMount } from "svelte";
   import { tweened } from "svelte/motion";
+  import { fade, fly, blur, slide } from "svelte/transition";
   import { englishWordsRaw } from "../store/store";
 
   const wordsLimit = 200;
@@ -14,7 +15,7 @@
   let typedLetter = "";
   let wordIndex = 0;
   let letterIndex = 0;
-  const seconds = 30;
+  const seconds = 5;
   let remainingSeconds = seconds;
   let timeInterval;
   let wpm = tweened(0, { delay: 300, duration: 1000 });
@@ -368,8 +369,11 @@
   <!-- Result Popup -->
   {#if gameState === "game over"}
     <div
-      class="absolute z-20 w-full h-full bg-main-black bg-opacity-100 px-[40px] items-center 
-      {gameState === 'game over' ? 'grid' : 'hidden'}"
+      class="absolute z-20 w-full h-full bg-main-black bg-opacity-100 px-[40px] items-center grid"
+      transition:fly={{
+        y: -200,
+        duration: 500,
+      }}
     >
       <div
         class="w-full h-fit bg-sub-gray-dark grid grid-rows-dis-monkey gap-[36px] py-[26px] px-[32px] rounded-lg"
@@ -434,7 +438,7 @@
 
   <!-- Paragraph Container -->
   <div class="flex items-center">
-    <div class="h-[116px] relative">
+    <div class="h-[116px] relative grid">
       <!-- User Input -->
       <div class="absolute w-full h-full">
         <input
@@ -451,49 +455,56 @@
       </div>
 
       <!-- Remainint Time -->
-      <div class="h-[32px] absolute -top-11">
-        <p
-          class="font-light text-[32px] leading-none 
+      {#if gameState === "on progress" || gameState === "waiting after blur"}
+        <div
+          class="h-[32px] absolute -top-11"
+          transition:fly={{
+            x: 50,
+          }}
+        >
+          <p
+            class="font-light text-[32px] leading-none 
           {gameState === 'on progress' ? 'text-main-purple' : ''}
           {gameState === 'waiting after blur' ? 'text-main-gray' : ''}
-          {gameState != 'on progress' && gameState != 'waiting after blur'
-            ? 'hidden'
-            : ''}"
-        >
-          {remainingSeconds}
-        </p>
-      </div>
+          "
+          >
+            {remainingSeconds}
+          </p>
+        </div>
+      {/if}
 
       <!-- user on-blur cover -->
-      <button
-        on:click={handleBlurCoverClick}
-        class="absolute justify-center items-center bg-main-black w-full h-full bg-opacity-0 text-white text-[17px] tracking-wider hover:text-main-purple z-10 group transition-all 
-          {gameState === 'user loses focus' ? 'flex' : 'hidden'}"
-        transition:blur={{ duration: 200 }}
-      >
-        <div class="unwantedEl flex gap-2 items-center">
-          <div
-            class="unwantedEl w-8 h-8 relative flex justify-center items-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="unwantedEl w-6 aspect-square absolute group-hover:fill-main-purple group-hover:w-8"
+      {#if gameState === "user loses focus"}
+        <button
+          on:click={handleBlurCoverClick}
+          class="absolute justify-center items-center bg-main-black w-full h-full bg-opacity-30 text-white text-[17px] tracking-wider hover:text-main-purple z-10 group transition-all box-content px-4 justify-self-center flex"
+          in:blur={{ duration: 400 }}
+          out:blur={{ duration: 100 }}
+        >
+          <div class="unwantedEl flex gap-2 items-center">
+            <div
+              class="unwantedEl w-8 h-8 relative flex justify-center items-center"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-                class="unwantedEl"
-              />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="unwantedEl w-6 aspect-square absolute group-hover:fill-main-purple group-hover:w-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+                  class="unwantedEl"
+                />
+              </svg>
+            </div>
+            <p class="unwantedEl">Click or press any key to focus</p>
           </div>
-          <p class="unwantedEl">Click or press any key to focus</p>
-        </div>
-      </button>
+        </button>
+      {/if}
 
       <!-- Caret -->
       <div

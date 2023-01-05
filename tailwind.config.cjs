@@ -19,6 +19,9 @@ module.exports = {
       gridTemplateRows: {
         "dis-monkey": "47px 1fr",
       },
+      width: {
+        "on-blur": "(100%) + 10px",
+      },
       keyframes: {
         caret: {
           "0%, to": {
