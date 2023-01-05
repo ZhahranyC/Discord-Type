@@ -15,8 +15,8 @@
   let typedLetter = "";
   let wordIndex = 0;
   let letterIndex = 0;
-  const seconds = 5;
-  let remainingSeconds = seconds;
+  const seconds = 30;
+  let remainingSeconds = seconds + 1;
   let timeInterval;
   let wpm = tweened(0, { delay: 300, duration: 1000 });
   let accuracy = tweened(0, { delay: 1300, duration: 1000 });
@@ -255,7 +255,7 @@
     // cek supaya event tidak bekerja selain pada saat lose focus
     if (gameState === "user loses focus") {
       // cek apakah masih di awal
-      if (remainingSeconds === seconds) {
+      if (remainingSeconds === seconds + 1) {
         changeGameState("waiting for input");
         focusToInput();
       } else {
@@ -266,7 +266,7 @@
   };
 
   const handleBlurCoverClick = () => {
-    if (remainingSeconds === seconds) {
+    if (remainingSeconds === seconds + 1) {
       changeGameState("waiting for input");
       focusToInput();
     } else {
@@ -276,11 +276,10 @@
   };
 
   const resetGame = () => {
-    changeGameState("waiting for input");
     eraseWordsDecoration();
     wordIndex = 0;
     letterIndex = 0;
-    remainingSeconds = seconds;
+    remainingSeconds = seconds + 1;
     $wpm = 0;
     $accuracy = 0;
     lastSkippedLetterIndex = new Array(wordsLimit).fill(0);
@@ -291,6 +290,7 @@
     caretLeft = currentEl.children[0].children[0].offsetLeft;
     caretTop = currentEl.children[0].offsetTop;
     focusToInput();
+    changeGameState("waiting for input");
   };
 
   const eraseWordsDecoration = () => {
@@ -349,6 +349,9 @@
   };
 
   const startTimer = () => {
+    if (remainingSeconds === seconds + 1) {
+      remainingSeconds -= 1;
+    }
     timeInterval = setInterval(setRemainingSeconds, 1000);
   };
 
