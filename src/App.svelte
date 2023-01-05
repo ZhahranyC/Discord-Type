@@ -5,6 +5,7 @@
 
 <svelte:head>
   <link rel="icon" type="image/svg+xml" href="/C-Letter-Purple.svg" />
+  <title>DiscordType</title>
 </svelte:head>
 
 <main class="w-full h-screen bg-main-black px-8 pt-[45px] pb-[180px] relative">
