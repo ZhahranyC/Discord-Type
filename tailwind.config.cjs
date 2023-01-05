@@ -19,6 +19,19 @@ module.exports = {
       gridTemplateRows: {
         "dis-monkey": "47px 1fr",
       },
+      keyframes: {
+        caret: {
+          "0%, to": {
+            opacity: "0",
+          },
+          "50%": {
+            opacity: "1",
+          },
+        },
+      },
+      animation: {
+        caret: "caret 0.85s infinite",
+      },
     },
   },
   plugins: [],
