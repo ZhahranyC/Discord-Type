@@ -32,9 +32,6 @@ module.exports = {
       animation: {
         caret: "caret 0.85s infinite",
       },
-      width: {
-        "blur-cover": "100% + 10px",
-      },
     },
   },
   plugins: [],
