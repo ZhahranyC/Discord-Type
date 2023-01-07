@@ -2,7 +2,7 @@
   // @ts-nocheck
   import { onMount } from "svelte";
   import { tweened } from "svelte/motion";
-  import { fade, fly, blur, slide } from "svelte/transition";
+  import { fly } from "svelte/transition";
   import { englishWordsRaw } from "../store/store";
   import BlurCover from "./BlurCover.svelte";
   import DynamicCursor from "./DynamicCursor.svelte";
@@ -15,7 +15,7 @@
     .sort(() => 0.5 - Math.random())
     .slice(wordsLimit);
 
-  // waiting for input, on progress, user loses focus, waiting after blur, game over
+  // waiting for input, on progress, user loses focus, waiting after bl ur, game over
   let gameState = "waiting for input";
   let typedLetter = "";
   let wordIndex = 0;
