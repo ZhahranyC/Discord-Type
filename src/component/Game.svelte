@@ -170,13 +170,16 @@
           }
 
           // moving caret
-          const previousLetterEl = previousWordEl.children[letterIndex - 1];
+          const previousLetterEl = letterIndex
+            ? previousWordEl.children[letterIndex - 1]
+            : previousWordEl.children[letterIndex];
           caretTop =
             previousWordEl.offsetTop > 0
               ? caretFixedValue
               : currentEl.children[0].offsetTop;
-          caretLeft =
-            previousLetterEl.offsetLeft + previousLetterEl.offsetWidth;
+          caretLeft = letterIndex
+            ? previousLetterEl.offsetLeft + previousLetterEl.offsetWidth
+            : previousLetterEl.offsetLeft;
         }
       }
 
