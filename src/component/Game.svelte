@@ -423,7 +423,7 @@
       >
         <!-- Title -->
         <div class="flex gap-[18px] items-end">
-          <img src="/purple-fire.svg" alt="#" class="h-full" />
+          <img src="/C-Letter-Purple.svg" alt="#" class="h-full" />
           <h3 class="text-[32px] font-bold text-white leading-[1.125]">
             DiscordType
           </h3>
@@ -473,7 +473,7 @@
 
   <!-- Title DiscordType -->
   <div class="flex gap-[20px] items-end">
-    <img src="/purple-fire.svg" alt="#" class="h-full" />
+    <img src="/C-Letter-Purple.svg" alt="#" class="h-full" />
     <h3 class="text-[32px] font-bold text-white leading-[1.125]">
       DiscordType
     </h3>
